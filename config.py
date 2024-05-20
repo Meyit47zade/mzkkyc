@@ -8,9 +8,9 @@ if os.path.exists('config.env'):
 
 class Config:
     def __init__(self) -> None:
-        self.SESSION: str = os.environ.get('SESSION', None)
-        self.API_ID: str = os.environ.get('API_ID', None)
-        self.API_HASH: str = os.environ.get('API_HASH', None)
+        self.SESSION: str = os.environ.get('SESSION',"BQE6miwAaPzcgi8qpkSfHLzNTO3sS6jYfrQbVGrR1FXh4A8ALwKWG53pWvjF_Hr9ap4GiGC2de3J09n6OlwfqVuu-07YfR2_b8IYtt8S-RMvCBKDzCR2dq3-2kDmamK_OuAR94upsjyGMn0WnCmLwfIs_EK59-RiGY85xdiQaHLq6CEmMsZtPAm31-NrzfZnUUTDXQydXALBupcLNHMfQWpZGsAcCY5DO60Vb38km42HPNxaSibPRdETuD8FlyGm2QdQR935wNe6E3SE5KGnh1u3T6j0D-Eaz8Rj7CuyxNkrJj0CHJGr_fgBFguiPLRWi4ifPCFzdmoSW9dEiZPJSlcjj0LjKQAAAAGFFTYFAA", None)
+        self.API_ID: str = os.environ.get('API_ID', "20617772", None)
+        self.API_HASH: str = os.environ.get('API_HASH', "eb464a3d12219bbfbbbf2d4deb3b3151", None)
         self.SUDO: list = [int(id) for id in os.environ.get(
             'SUDO', ' ').split() if id.isnumeric()]
         if not self.SESSION or not self.API_ID or not self.API_ID:
